@@ -18,10 +18,10 @@ bytemuck = "1"
 log = "0.4"
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
-glow = { version = "0.6.0", default-features = false }
+glow = { git = "https://github.com/flukejones/glow", branch = "main", default-features = false }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
-glow = { version = "0.6.0", default-features = false, features = ["web-sys"] }
+glow = { git = "https://github.com/flukejones/glow", branch = "main", default-features = false, features = ["web-sys"] }
 web-sys = { version = "0.3", features = ["WebGlRenderingContext"] }
 
 [dev-dependencies]
